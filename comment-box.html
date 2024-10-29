@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+
+<body>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam sapiente, inventore qui vel, sint, aut
+            atque dolorem a nesciunt esse molestias laborum aspernatur vero reprehenderit necessitatibus ipsum
+            accusantium quae recusandae.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam sapiente, inventore qui vel, sint, aut
+            atque dolorem a nesciunt esse molestias laborum aspernatur vero reprehenderit necessitatibus ipsum
+            accusantium quae recusandae.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam sapiente, inventore qui vel, sint, aut
+            atque dolorem a nesciunt esse molestias laborum aspernatur vero reprehenderit necessitatibus ipsum
+            accusantium quae recusandae.</p>
+    </div>
+
+    <textarea name="" id="input-field" cols="50" rows="5"></textarea>
+    <br>
+    <button id="btn-update">Comment</button>
+    <script>
+        document.getElementById('btn-update').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = inputText;
+            
+            commentContainer.appendChild(p);
+            inputField.value ='';
+        })
+    </script>
+
+</body>
+
+</html>
